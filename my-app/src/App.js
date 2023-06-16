@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import Headder from './components/Headder';
 import logo from './logo.svg';
 import styles from '../src/styles/App.module.scss';
-import Header from './components/Header';
 
 function App() {
 
@@ -12,9 +12,9 @@ function App() {
   };
 
   return (
-    <div className={styles.App}>
-    <Header />
-      <header className={`${isDarkMode ? styles.dark_mode : ''}`}>
+    <div className={ `${styles.App} ${isDarkMode ? styles.dark_mode : ''}`}>
+    <Headder />
+      <header>
         <img src={logo} alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
