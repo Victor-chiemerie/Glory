@@ -1,10 +1,18 @@
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
+      <header className={`App-header ${isDarkMode ? 'dark-mode' : ''}`}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,6 +25,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={toggleTheme}>Toggle Theme</button>
       </header>
     </div>
   );
