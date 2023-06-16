@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import styles from '../src/styles/App.module.scss';
+import Header from './components/Header';
 
 function App() {
 
@@ -11,14 +12,14 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <header className={`App-header ${isDarkMode ? 'dark-mode' : ''}`}>
-        <img src={logo} className="App-logo" alt="logo" />
+    <div className={styles.App}>
+    <Header />
+      <header className={`${isDarkMode ? styles.dark_mode : ''}`}>
+        <img src={logo} alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
