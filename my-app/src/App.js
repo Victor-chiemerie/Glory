@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeTheme } from '../src/redux/slice/ThemeSlice';
 import Headder from './components/Headder';
 import logo from './logo.svg';
 import styles from '../src/styles/App.module.scss';
 
-function App() {
+const App = () => {
 
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
+  const { dark } = useSelector((store) => store.theme);
+  const dispatch = useDispatch();
 
   return (
-    <div className={ `${styles.App} ${isDarkMode ? styles.dark_mode : ''}`}>
+    <div>
     <Headder />
-      <header>
+      <header  className={ `${styles.App} ${dark ? styles.dark_mode : ''}`}>
         <img src={logo} alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -26,7 +25,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={toggleTheme}>Toggle Theme</button>
+        <button onClick={() => dispatch(changeTheme())}>Toggle Theme</button>
       </header>
     </div>
   );

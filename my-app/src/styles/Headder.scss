@@ -1,13 +1,25 @@
+:root {
+  --nav-primary-color: #333;
+  --nav-bg: #fff;
+}
+
+.dark_mode {
+  --nav-primary-color: #fff;
+  --nav-bg: rgb(16, 16, 14);
+}
+
 .my_navbar {
-    background-color: #e6edf4;
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid black;
   
     .navbar-brand {
-      color: #e21616;
+      color: var(--nav-primary-color);
       font-weight: bold;
     }
   
     .nav-link {
-      color: #333;
+      color: var(--nav-primary-color);
+      text-align: center;
   
       &:hover {
         color: #007bff;
@@ -15,6 +27,10 @@
     }
   
     .navbar-toggler {
-      border-color: #333;
+      border-color: var(--nav-primary-color);
+
+      span {
+        color: var(--nav-primary-color);
+      }
     }
   }

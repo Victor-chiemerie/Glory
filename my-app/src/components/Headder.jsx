@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import '../styles/Headder.scss';
 
 const Headder = () => {
+
+  const { dark } = useSelector((store) => store.theme);
 
     const [expanded, setExpanded] = useState(false);
   const toggleMenu = () => {
@@ -10,12 +13,12 @@ const Headder = () => {
   };
 
   return (
-    <Navbar className='my_navbar' expand="lg" expanded={expanded}>
+    <Navbar className={ `my_navbar ${dark ? 'dark_mode' : ''}`} sticky="top" expand="lg" expanded={expanded}>
     <Container>
       <Navbar.Brand href="#home">Lory's Hair Doc</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu} />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto" variant='danger'>
+        <Nav className="ml-auto">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#about">About</Nav.Link>
           <Nav.Link href="#services">Services</Nav.Link>
