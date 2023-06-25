@@ -1,5 +1,5 @@
 :root {
-  --nav-primary-color: #333;
+  --nav-primary-color: rgb(247, 27, 148);
   --nav-bg: #fff;
 }
 
@@ -14,7 +14,8 @@
   
     .navbar-brand {
       color: var(--nav-primary-color);
-      font-weight: bold;
+      font-weight: 900;
+      font-family: 'Pacifico', cursive;
     }
   
     .nav-link {

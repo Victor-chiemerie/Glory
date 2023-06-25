@@ -15,7 +15,7 @@ const Headder = () => {
   return (
     <Navbar className={ `my_navbar ${dark ? 'dark_mode' : ''}`} sticky="top" expand="lg" expanded={expanded}>
     <Container>
-      <Navbar.Brand href="#home">Lory's Hair Doc</Navbar.Brand>
+      <Navbar.Brand href="#home">Curly</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={toggleMenu} />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
