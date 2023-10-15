@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+strong {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: rgb(65, 91, 141);
+}
+
+header {
+  height: 25px;
+  padding: 4%;
+  display: flex;
+  align-items: center;
+}
+header span {
+  color: white;
+  font-size: 60px;
+}
+
+.picture {
+  padding: 4%;
+  background-image: url(images/deborah.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+.picture .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  /* Adjust the gradient colors and opacity as needed */
+}
+.picture .name {
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 15px;
+}
+
+.title {
+  padding: 4%;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contact div {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+.contact ul {
+  display: flex;
+  gap: 24px;
+}
+.contact ul li {
+  font-size: 22px;
+}
+
+.about {
+  padding: 4%;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(145, 160, 189));
+}
+.about div {
+  text-align: center;
+  padding-bottom: 12px;
+  color: white;
+  font-weight: bold;
+}
+.about p {
+  text-align: center;
+  color: white;
+}
+
+.articles {
+  background-image: linear-gradient(rgb(145, 160, 189), rgba(0, 0, 0, 0));
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.articles .article_picture {
+  height: 300px;
+  border: 1px solid rgb(2, 67, 188);
+}/*# sourceMappingURL=index.css.map */
