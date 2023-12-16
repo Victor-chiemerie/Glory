@@ -24,10 +24,7 @@ body {
 }
 
 header {
-  height: 25px;
-  padding: 4%;
-  display: flex;
-  align-items: center;
+  height: 50px;
 }
 header span {
   position: fixed;
@@ -56,11 +53,29 @@ header span {
 }
 .picture .name {
   color: white;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   font-family: "Lobster", sans-serif;
   position: absolute;
   bottom: 15px;
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 50%;
+  right: 15px; /* Adjust as needed */
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+.scroll-indicator .circle {
+  width: 13px;
+  height: 13px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent; /* Adjust the default circle color */
+  transition: background-color 0.3s ease; /* Smooth transition for background color changes */
 }
 
 .title {
