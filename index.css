@@ -11,8 +11,7 @@ strong {
   background-color: white;
   padding: 5px;
   border-radius: 10px;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 100%;
 }
 
 img {
@@ -31,6 +30,9 @@ header {
   align-items: center;
 }
 header span {
+  position: fixed;
+  top: 16px;
+  left: 18px;
   color: white;
   font-size: 60px;
 }
@@ -56,6 +58,7 @@ header span {
   color: white;
   font-size: 40px;
   font-weight: bold;
+  font-family: "Lobster", sans-serif;
   position: absolute;
   bottom: 15px;
 }
