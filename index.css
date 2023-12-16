@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: "Times New Roman", Times, serif;
 }
 
 li {
@@ -11,7 +12,9 @@ strong {
   background-color: white;
   padding: 5px;
   border-radius: 10px;
-  width: 100%;
+  width: -moz-min-content;
+  width: min-content;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 img {
@@ -32,6 +35,21 @@ header span {
   left: 18px;
   color: white;
   font-size: 60px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 1.5px 3px gray;
+  border: none;
+  color: white;
+  background-color: blue;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-left: auto;
 }
 
 .picture {
@@ -63,7 +81,8 @@ header span {
 .scroll-indicator {
   position: fixed;
   top: 50%;
-  right: 15px; /* Adjust as needed */
+  right: 15px;
+  /* Adjust as needed */
   transform: translateY(-50%);
   display: flex;
   gap: 8px;
@@ -74,14 +93,23 @@ header span {
   height: 13px;
   border: 2px solid white;
   border-radius: 50%;
-  background-color: transparent; /* Adjust the default circle color */
-  transition: background-color 0.3s ease; /* Smooth transition for background color changes */
+  background-color: transparent;
+  /* Adjust the default circle color */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color changes */
+}
+
+.long_text {
+  font-size: 18px;
+  text-align: center;
+  color: white;
 }
 
 .title {
   padding: 4%;
   color: white;
   text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
@@ -95,6 +123,7 @@ header span {
   color: white;
   font-size: 25px;
   font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 .contact ul {
   display: flex;
@@ -113,15 +142,12 @@ header span {
   padding-bottom: 12px;
   color: white;
   font-weight: bold;
-}
-.about p {
-  text-align: center;
-  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .articles {
-  background-image: linear-gradient(rgb(145, 160, 189), rgba(0, 0, 0, 0));
-  padding: 4%;
+  background-image: linear-gradient(to top right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(145, 160, 189));
+  padding: 60px 4%;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -129,4 +155,25 @@ header span {
 .articles .article_picture {
   height: 300px;
   border: 1px solid rgb(2, 67, 188);
+}
+.articles h3 {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.articles ul {
+  display: flex;
+  justify-content: space-around;
+}
+.articles ul div {
+  display: flex;
+  gap: 3px;
+}
+.articles ul div p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=index.css.map */
