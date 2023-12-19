@@ -1,3 +1,10 @@
+const hamburger = document.querySelector('#hamburger');
+const mobileMenu = document.querySelector('#mobile-menu');
+const closeButton = document.querySelector('#close-button');
+const optionsMenu = document.querySelectorAll('#mobile-menu ul li');
+const backGroundPicture = document.querySelector('#picture');
+
+/**Scroll indicator */
 document.addEventListener("DOMContentLoaded", function() {
     // Get all circle elements
     var circles = document.querySelectorAll(".circle");
@@ -23,3 +30,41 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+/**Toogle mobile menu */
+function toggleMenu() {
+    mobileMenu.classList.toggle('hide');
+}
+
+hamburger.addEventListener('click', toggleMenu);
+closeButton.addEventListener('click', toggleMenu);
+
+optionsMenu.forEach((option) => {
+    option.addEventListener('click', toggleMenu);
+});
+
+// An array of image URLs that you want to cycle through
+var photos = [
+    'assets/deborah.jpg',
+    'assets/IMG_3842.JPG',
+    'assets/IMG_E3706.JPG',
+    'assets/IMG_E3708.JPG'
+    // Add more image URLs as needed
+  ];
+  
+  /** Function to change the background image */
+  function changeBackgroundImage() {
+    // Get a random index from the images array
+    var randomIndex = Math.floor(Math.random() * photos.length);
+  
+    // Set the background image using the selected URL
+    backGroundPicture.style.backgroundImage = 'url(' + photos[randomIndex] + ')';
+  }
+  
+  // Call the function initially to set the background image
+  changeBackgroundImage();
+  
+  // Set up the interval to change the background image every 5 seconds (5000 milliseconds)
+  var intervalId = setInterval(changeBackgroundImage, 5000);
+
+

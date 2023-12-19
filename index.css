@@ -78,7 +78,6 @@ menu :last-child {
 
 .picture {
   padding: 4%;
-  background-image: url(assets/deborah.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
