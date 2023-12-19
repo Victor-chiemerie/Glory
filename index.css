@@ -12,18 +12,21 @@ strong {
   background-color: white;
   padding: 5px;
   border-radius: 10px;
-  width: -moz-min-content;
-  width: min-content;
+  width: -moz-max-content;
+  width: max-content;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img {
+img,
+video {
   width: 100%;
   height: 100%;
 }
 
 body {
   background-color: rgb(65, 91, 141);
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -52,9 +55,30 @@ button {
   margin-left: auto;
 }
 
+menu :first-child {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(128, 128, 128, 0.274);
+}
+menu :last-child {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(128, 128, 128, 0.274);
+}
+
 .picture {
   padding: 4%;
-  background-image: url(images/deborah.jpg);
+  background-image: url(assets/deborah.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
@@ -155,6 +179,7 @@ button {
 .articles .article_picture {
   height: 300px;
   border: 1px solid rgb(2, 67, 188);
+  position: relative;
 }
 .articles h3 {
   color: white;
@@ -172,6 +197,111 @@ button {
 .articles ul div p {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 15px;
+}
+
+.visual_works {
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+.visual_works div {
+  padding: 2px 22px;
+  height: 350px;
+}
+.visual_works div video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid rgb(2, 67, 188);
+}
+.visual_works button {
+  margin: 0;
+  align-self: center;
+}
+
+.closing {
+  padding: 4%;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(145, 160, 189));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.closing main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.closing main .logo {
+  height: 110px;
+  width: 110px;
+}
+.closing main h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+.closing main :last-child {
+  padding: 0;
+  font-size: medium;
+  font-weight: normal;
+}
+.closing .end {
+  display: flex;
+  justify-content: space-between;
+}
+.closing .end p {
+  font-size: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.closing .end p a {
+  text-decoration: none;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.mobile-menu {
+  overflow-y: hidden;
+  box-sizing: border-box;
+  padding: 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgb(0, 35, 102);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.mobile-menu span {
+  color: white;
+  font-size: 30px;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+}
+.mobile-menu ul li {
+  border-bottom: 2px solid white;
+  padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+.mobile-menu ul li a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.mobile-menu ul li:last-child {
+  border-bottom: none;
 }
 
 .hide {
