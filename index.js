@@ -4,6 +4,7 @@ const closeButton = document.querySelector('#close-button');
 const optionsMenu = document.querySelectorAll('#mobile-menu ul li');
 const backGroundPicture = document.querySelector('#picture');
 
+
 /**Scroll indicator */
 document.addEventListener("DOMContentLoaded", function() {
     // Get all circle elements
@@ -31,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+
 /**Toogle mobile menu */
 function toggleMenu() {
     mobileMenu.classList.toggle('hide');
@@ -43,6 +45,7 @@ optionsMenu.forEach((option) => {
     option.addEventListener('click', toggleMenu);
 });
 
+
 // An array of image URLs that you want to cycle through
 var photos = [
     'assets/deborah.jpg',
@@ -52,7 +55,7 @@ var photos = [
     // Add more image URLs as needed
   ];
   
-  /** Function to change the background image */
+  /**Changes the background image automatically */
   function changeBackgroundImage() {
     // Get a random index from the images array
     var randomIndex = Math.floor(Math.random() * photos.length);
@@ -66,5 +69,11 @@ var photos = [
   
   // Set up the interval to change the background image every 5 seconds (5000 milliseconds)
   var intervalId = setInterval(changeBackgroundImage, 5000);
+
+  var articles = [
+    {},
+    {},
+    {}
+  ];
 
 
