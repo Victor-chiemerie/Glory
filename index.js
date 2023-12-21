@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // Show main content
         document.querySelector(".container").style.display = "block";
-    }, 4000); // Adjust the time as needed
+    }, 5000); // Adjust the time as needed
 });
 
 
