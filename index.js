@@ -101,3 +101,20 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+/**See more or less effect */
+const seeButton = document.querySelector('.see');
+
+const toggleText = () => {
+const longText = document.getElementById("story_line");
+
+    if (longText.classList.contains("story_line")) {
+        longText.classList.remove("story_line");
+        seeButton.textContent = "See less";
+    } else {
+        longText.classList.add("story_line");
+        seeButton.textContent = "See more";
+    }
+}
+
+seeButton.addEventListener('click', toggleText);
+
