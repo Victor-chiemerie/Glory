@@ -77,3 +77,27 @@ var photos = [
   ];
 
 
+  /**Pre-loading feature */
+document.addEventListener("DOMContentLoaded", function () {
+    // Simulate a delay (you can replace this with actual loading logic)
+    setTimeout(function () {
+        // Hide loading screen
+        document.getElementById("loading").style.display = "none";
+        
+        // Show main content
+        document.querySelector(".container").style.display = "block";
+    }, 4000); // Adjust the time as needed
+});
+
+
+  /**Transition Effect */
+  document.addEventListener("DOMContentLoaded", function () {
+    var loading = document.querySelector('.loading');
+
+    // Add the 'centered' class after a delay (e.g., 3 seconds)
+    setTimeout(function () {
+        loading.classList.add('centered');
+    }, 3000);
+});
+
+
