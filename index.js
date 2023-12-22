@@ -156,9 +156,9 @@ const articleStory = document.getElementById('story_line');
 const articleDate = document.getElementById('date');
 const articleAuthor = document.getElementById('author');
 const prevArticleBtn = document.getElementById('articles-prev');
-const nextArticleBtn = document.getElementById('articles-next')
+const nextArticleBtn = document.getElementById('articles-next');
 
-// Set initial display values
+// Set initial article display values
 articleDisplay.innerHTML = articles[0].display;
 articleTitle.innerText = articles[0].title;
 articleStory.innerText = articles[0].story;
@@ -222,6 +222,51 @@ const visualWorks = [
     display: `<video loop controls src="assets/test video.mp4"></video>`,
   },
 ];
+
+const visualDisplay = document.getElementById('visual_display');
+const prevVisualBtn = document.getElementById('visual-prev');
+const nextVisualBtn = document.getElementById('visual-next');
+
+// Set initial visual work display values
+visualDisplay.innerHTML = visualWorks[0].display;
+
+/**Toggle to either preious or next article */
+const toggleVisualWorks = (number) => {
+    visualDisplay.innerHTML = visualWorks[number].display;
+}
+
+var visualWorksNumber = 0;
+
+/**Check when visual works has reached the end */
+const checkVisualWorkNumber = () => {
+    if (visualWorksNumber <= 0) {
+        prevVisualBtn.style.display = 'none';
+    } else {
+        prevVisualBtn.style.display = 'block';
+    }
+
+    if (visualWorksNumber >= visualWorks.length - 1) {
+        nextVisualBtn.style.display = 'none';
+    } else {
+        nextVisualBtn.style.display = 'block';
+    }
+}
+
+checkVisualWorkNumber();
+
+// Switch to previous visual work
+prevVisualBtn.addEventListener('click', () => {
+    toggleVisualWorks(visualWorksNumber - 1);
+    visualWorksNumber--;
+    checkVisualWorkNumber();
+})
+
+// Switch to next visual work
+nextVisualBtn.addEventListener('click', () => {
+    toggleVisualWorks(visualWorksNumber + 1);
+    visualWorksNumber++;
+    checkVisualWorkNumber();
+})
 
 /**Pre-loading feature and Transition Effect */
 document.addEventListener("DOMContentLoaded", function () {
