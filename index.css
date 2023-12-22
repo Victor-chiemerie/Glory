@@ -1,0 +1,383 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+strong {
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  width: -moz-max-content;
+  width: max-content;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+img,
+video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body {
+  background-color: rgb(65, 91, 141);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 50px;
+}
+header span {
+  position: fixed;
+  top: 16px;
+  left: 18px;
+  color: white;
+  font-size: 60px;
+}
+
+button {
+  padding: 5px;
+  border-radius: 6px;
+  box-shadow: 1.5px 3px gray;
+  border: none;
+  color: white;
+  background-color: blue;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 14px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  margin-left: auto;
+}
+
+menu :first-child {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(128, 128, 128, 0.274);
+}
+menu :last-child {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(128, 128, 128, 0.274);
+}
+
+.picture {
+  padding: 4%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  position: relative;
+}
+.picture .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  /* Adjust the gradient colors and opacity as needed */
+}
+.picture .name {
+  color: white;
+  font-size: 45px;
+  font-weight: bold;
+  font-family: "Lobster", sans-serif;
+  position: absolute;
+  bottom: 15px;
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 50%;
+  right: 15px;
+  /* Adjust as needed */
+  transform: translateY(-50%);
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+.scroll-indicator .circle {
+  width: 13px;
+  height: 13px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  /* Adjust the default circle color */
+  transition: background-color 0.3s ease;
+  /* Smooth transition for background color changes */
+}
+
+.long_text {
+  font-size: 18px;
+  text-align: center;
+  color: white;
+}
+
+.story_line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 9; /* Number of lines to show before truncating */
+  -webkit-box-orient: vertical;
+}
+
+.title {
+  padding: 4%;
+  color: white;
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.contact div {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact ul {
+  display: flex;
+  gap: 24px;
+}
+.contact ul li {
+  font-size: 22px;
+}
+
+.about {
+  padding: 4%;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(145, 160, 189));
+}
+.about div {
+  text-align: center;
+  padding-bottom: 12px;
+  color: white;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.articles {
+  background-image: linear-gradient(to top right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(145, 160, 189));
+  padding: 60px 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.articles .article_picture {
+  height: 300px;
+  border: 1px solid rgb(2, 67, 188);
+  position: relative;
+}
+.articles .article_picture #display {
+  width: 100%;
+  height: 100%;
+}
+.articles h3 {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.articles ul {
+  display: flex;
+  justify-content: space-around;
+}
+.articles ul div {
+  display: flex;
+  gap: 3px;
+}
+.articles ul div p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.visual_works {
+  padding: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+.visual_works div {
+  padding: 2px 22px;
+  height: 350px;
+}
+.visual_works div video {
+  border: 2px solid rgb(2, 67, 188);
+}
+.visual_works button {
+  margin: 0;
+  align-self: center;
+}
+
+.closing {
+  padding: 4%;
+  background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), rgb(145, 160, 189));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.closing main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.closing main .logo {
+  height: 110px;
+  width: 110px;
+}
+.closing main h4 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size: large;
+}
+.closing main :last-child {
+  padding: 0;
+  font-size: medium;
+  font-weight: normal;
+}
+.closing .end {
+  display: flex;
+  justify-content: space-between;
+}
+.closing .end p {
+  font-size: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.closing .end p a {
+  text-decoration: none;
+  color: white;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.mobile-menu {
+  overflow-y: hidden;
+  box-sizing: border-box;
+  padding: 8%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: rgb(0, 35, 102);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.mobile-menu span {
+  color: white;
+  font-size: 30px;
+}
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 25px;
+}
+.mobile-menu ul li {
+  border-bottom: 2px solid white;
+  padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+.mobile-menu ul li a {
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.mobile-menu ul li:last-child {
+  border-bottom: none;
+}
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(30, 30, 30);
+}
+.loading div {
+  height: 80px;
+  width: 80px;
+  font-size: 0;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom right, rgb(8, 34, 84), rgb(8, 34, 84), rgb(145, 160, 189));
+  animation: moveDown 3s ease;
+}
+@keyframes moveDown {
+  0% {
+    transform: translateY(-100%);
+    width: 50px;
+    height: 50px;
+  }
+  25% {
+    transform: translateY(350%);
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    transform: translateY(200%);
+    width: 200px;
+    height: 200px;
+  }
+  75% {
+    transform: translateY(100%);
+    width: 300px;
+    height: 300px;
+  }
+  100% {
+    transform: translateY(50%);
+    width: 400px;
+    height: 400px;
+  }
+}
+.loading.centered div {
+  padding-top: 100px;
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgb(8, 34, 84), rgb(8, 34, 84), rgb(8, 34, 84), rgb(145, 160, 189));
+  border-radius: 0;
+  color: white;
+  font-size: 55px;
+  font-family: "Lobster", sans-serif;
+}
+
+.container {
+  display: none;
+}
+
+.hide {
+  display: none;
+}/*# sourceMappingURL=index.css.map */
