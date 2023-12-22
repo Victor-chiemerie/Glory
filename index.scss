@@ -22,6 +22,7 @@ img,
 video {
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 
 body {
@@ -199,6 +200,11 @@ menu {
         height: 300px;
         border: 1px solid rgb(2, 67, 188);
         position: relative;
+
+        #display {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     h3 {
@@ -235,7 +241,6 @@ menu {
         height: 350px;
 
         video {
-            object-fit: cover;
             border: 2px solid rgb(2, 67, 188);
         }
     }
