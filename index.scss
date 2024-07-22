@@ -569,6 +569,10 @@ header {
     }
 }
 
+.hide {
+    display: none;
+}
+
 footer {
     width: calc(100% - 25px);
     background-color: rgb(43,56,76);
