@@ -569,13 +569,9 @@ header {
     }
 }
 
-.hide {
-    display: none;
-}
-
 footer {
     width: calc(100% - 25px);
-    background-color: rgb(43,56,76);
+    background-color: rgb(43, 56, 76);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -593,4 +589,68 @@ footer {
         font-size: 8.9px;
         color: $primary_color;
     }
+}
+
+.modal-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100vh;
+    z-index: 1;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.6);
+    transition: width 0.5s ease;
+    /* Smooth transition */
+
+    main {
+        z-index: 2;
+        background-color: $primary_color;
+        padding: 20px;
+        height: 100%;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+
+            i {
+                padding: 10px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+
+            li {
+                padding: 5px;
+                border-bottom: 1px solid black;
+
+                a {
+                    text-decoration: none;
+                    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                    color: black;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+.modal-open {
+    width: 100%;
+}
+
+.stop-scroll {
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
 }

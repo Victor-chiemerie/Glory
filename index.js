@@ -1,44 +1,22 @@
 const hamburger = document.querySelector("#hamburger");
-const mobileMenu = document.querySelector("#mobile-menu");
-const closeButton = document.querySelector("#close-button");
-const optionsMenu = document.querySelectorAll("#mobile-menu ul li");
+const mobileMenu = document.querySelector("#modal-menu");
+const closeButton = document.querySelector(".fa-close");
+const body = document.querySelector("body");
+const optionsMenu = document.querySelectorAll("#modal-menu ul li");
 const backGroundPicture = document.querySelector("#picture");
 const seeButton = document.querySelector(".see");
 const loading = document.querySelector(".loading");
 
-/**Scroll indicator */
-document.addEventListener("DOMContentLoaded", function () {
-  // Get all circle elements
-  var circles = document.querySelectorAll(".circle");
-
-  // Listen for the scroll event on the window
-  window.addEventListener("scroll", function () {
-    // Calculate the height of each section based on the number of circles
-    var sectionHeight = document.documentElement.scrollHeight / circles.length;
-
-    // Calculate the current section based on the scroll position
-    var currentSection = Math.floor(window.scrollY / sectionHeight);
-
-    // Check if the user has reached the bottom of the page
-    var isAtBottom =
-      window.innerHeight + window.scrollY >= document.body.offsetHeight;
-
-    // Loop through each circle and update its background color
-    circles.forEach(function (circle, index) {
-      if (isAtBottom || index <= currentSection) {
-        circle.style.backgroundColor =
-          "black"; /* Activate color for current and previous circles, or all circles if at the bottom */
-      } else {
-        circle.style.backgroundColor =
-          "transparent"; /* Deactivate color for future circles */
-      }
-    });
-  });
-});
 
 /**Toogle mobile menu */
 function toggleMenu() {
-  mobileMenu.classList.toggle("hide");
+  if (mobileMenu.classList.contains('modal-open')) {
+    mobileMenu.classList.remove('modal-open'); // close the modal
+    body.classList.remove('stop-scroll'); // stop site from scrolling
+  } else {
+    mobileMenu.classList.add('modal-open'); // open the modal
+    body.classList.add('stop-scroll'); // remove scroll restriction
+  }
 }
 
 hamburger.addEventListener("click", toggleMenu);
