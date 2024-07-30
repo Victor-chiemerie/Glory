@@ -11,14 +11,6 @@ li {
     list-style-type: none;
 }
 
-strong {
-    background-color: white;
-    padding: 5px;
-    border-radius: 10px;
-    width: max-content;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
 img,
 video {
     width: 100%;
@@ -269,6 +261,13 @@ header {
                         color: $button_color;
                         border: 1px solid $button_color;
                         font-size: 10px;
+
+                        a {
+                            color: $button_color;
+                            text-decoration: none;
+                            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                            font-weight: bold;
+                        }
                     }
                 }
 
@@ -351,6 +350,13 @@ header {
                             color: $button_color;
                             border: 1px solid $button_color;
                             font-size: 10px;
+
+                            a {
+                                color: $button_color;
+                                text-decoration: none;
+                                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                                font-weight: bold;
+                            }
                         }
                     }
 
@@ -433,6 +439,13 @@ header {
                                 color: $button_color;
                                 border: 1px solid $button_color;
                                 font-size: 8px;
+
+                                a {
+                                    color: $button_color;
+                                    text-decoration: none;
+                                    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                                    font-weight: bold;
+                                }
                             }
                         }
 
@@ -508,6 +521,13 @@ header {
                                 color: $button_color;
                                 border: 1px solid $button_color;
                                 font-size: 8px;
+
+                                a {
+                                    color: $button_color;
+                                    text-decoration: none;
+                                    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                                    font-weight: bold;
+                                }
                             }
                         }
 

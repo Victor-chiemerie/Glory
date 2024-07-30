@@ -93,7 +93,11 @@ for (let index = 0; index < articles.length; index++) {
         </div>
         <h3>${articles[index].title}</h3>
         <p>${articles[index].story}</p>
-        <button type="button">Continue reading <i class="fa fa-arrow-right" style="font-size:10.5px; color: rgb(52, 152, 220);"></i></button>
+        <button type="button" id="view-article${index + 1}"><a href="article.html">Continue reading <i class="fa fa-arrow-right" style="font-size:10.5px; color: rgb(52, 152, 220);"></i></a></button>
       </div>
     `;
 }
+
+/** ..................................................................... */
+// Article page
+
