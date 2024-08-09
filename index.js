@@ -96,8 +96,20 @@ for (let index = 0; index < articles.length; index++) {
         <button type="button" id="view-article${index + 1}"><a href="article.html">Continue reading <i class="fa fa-arrow-right" style="font-size:10.5px; color: rgb(52, 152, 220);"></i></a></button>
       </div>
     `;
+  
+  /** ..................................................................... */
 }
 
-/** ..................................................................... */
 // Article page
+  
+const articleButton = document.querySelector(`#view-article1`);
+articleButton.addEventListener("click", () => {
+  console.log("Article clicked");
+  const articlePicture = document.querySelector(`#aPicture`);
+  const articleTitle = document.querySelector(`#aTitle`);
+  const articleStory = document.querySelector(`#aStory`);
 
+  articlePicture.innerHTML = articles[index + 1].image;
+  articleTitle.innerHTML = articles[index + 1].title;
+  articleStory.innerHTML = articles[index + 1].story;
+})
